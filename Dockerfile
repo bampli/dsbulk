@@ -42,6 +42,9 @@ WORKDIR $HOME
 
 USER dsbulk
 
+# folder to clone csv files
+chmod 077 /home
+
 # Run 
 #ENTRYPOINT [ "/dsbulk/bin/dsbulk" ]
 ENTRYPOINT [ "/bin/bash" ]
