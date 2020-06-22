@@ -36,14 +36,15 @@ RUN set -x \
     && mkdir -p $DSBULK_HOME/logs $DSBULK_HOME/data \
     && chown -R dsbulk:dsbulk ${DSBULK_HOME}
 
+WORKDIR /home
+git clone https://github.com/datastax/graph-book.git
+chmod 0777 graph-book
+
 ENV PATH $DSBULK_HOME/bin:$PATH
 ENV HOME $DSBULK_HOME
 WORKDIR $HOME
 
 USER dsbulk
-
-# folder to clone csv files
-RUN chmod 077 /home
 
 # Run 
 #ENTRYPOINT [ "/dsbulk/bin/dsbulk" ]
