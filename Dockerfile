@@ -11,7 +11,7 @@ ARG URL_PREFIX=https://downloads.datastax.com/dsbulk
 ARG DSBULK_TARBALL=dsbulk-${VERSION}.tar.gz
 ARG DSBULK_DOWNLOAD_URL=${URL_PREFIX}/${DSBULK_TARBALL}
 
-RUN apt-get update && apt-get install wget sysstat locales -y --no-install-recommends && \
+RUN apt-get update && apt-get install git wget sysstat locales -y --no-install-recommends && \
 	apt-get autoclean && apt-get --purge -y autoremove && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 	# Comment out Assistive Technologies to run the grimlin console from docker exec
