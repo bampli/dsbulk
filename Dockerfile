@@ -37,8 +37,8 @@ RUN set -x \
     && chown -R dsbulk:dsbulk ${DSBULK_HOME}
 
 WORKDIR /home
-git clone https://github.com/datastax/graph-book.git
-chmod 0777 graph-book
+RUN git clone https://github.com/datastax/graph-book.git
+RUN chmod 0777 graph-book
 
 ENV PATH $DSBULK_HOME/bin:$PATH
 ENV HOME $DSBULK_HOME
