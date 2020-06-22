@@ -43,5 +43,4 @@ WORKDIR $HOME
 USER dsbulk
 
 # Run 
-#ENTRYPOINT [ "/dsbulk/bin/dsbulk" ]
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/dsbulk/bin/dsbulk" ]
