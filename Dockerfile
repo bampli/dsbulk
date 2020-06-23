@@ -38,6 +38,9 @@ RUN set -x \
 
 WORKDIR /home
 RUN git clone https://github.com/datastax/graph-book.git
+RUN chmod -R 0777 graph-book/
+RUN chmod -R 0777 graph-book/data/
+RUN chmod -R 0777 graph-book/data/ch6/
 RUN chmod -R 0777 graph-book/data/ch6/*.csv
 
 ENV PATH $DSBULK_HOME/bin:$PATH
