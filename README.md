@@ -1,6 +1,6 @@
 # dsbulk
 
-This DataStax Bulk Loader merged with DataStax graph-book in a single image. It expects a DSE server running with an external network named 'graph'. Check [DSE setup](https://github.com/bampli/bampli/tree/master/datastax).
+DataStax Bulk Loader merged with DataStax graph-book in a single image. It expects a DSE server running with an external network named 'graph'. Check [DSE setup](https://github.com/bampli/bampli/tree/master/datastax).
 
 ## DataStax Bulk Loader
 
